@@ -45,6 +45,7 @@ def home():
             my_data.truncate
             json.dump(my_object, my_data, indent = 4)
             my_data.close()
+        return render_template('result.html', output=str(output), query=str(tokens['query']))
     # if howdoi doesnt give ans
     else:
     # still update the count 
